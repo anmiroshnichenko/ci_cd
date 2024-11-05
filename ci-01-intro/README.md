@@ -10,7 +10,7 @@
 ## Основная часть
 
 Необходимо создать собственные workflow для двух типов задач: bug и остальные типы задач. Задачи типа bug должны проходить жизненный цикл:
-![alt text](ci-01-intro/workflow_scheme.jpg)
+![alt text](workflow_scheme.jpg)
 
 1. Open -> On reproduce.
 2. On reproduce -> Open, Done reproduce.
@@ -19,6 +19,7 @@
 5. Done fix -> On test.
 6. On test -> On fix, Done.
 7. Done -> Closed, Open.
+   
 ![alt text](for_bug.jpg)
 
 Остальные задачи должны проходить по упрощённому workflow:
@@ -28,7 +29,8 @@
 3. Done develop -> On test.
 4. On test -> On develop, Done.
 5. Done -> Closed, Open.
-![alt text](for_ather.jpg)
+   
+![alt text](for_other.jpg)
 
 
 
