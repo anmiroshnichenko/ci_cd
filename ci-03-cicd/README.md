@@ -11,7 +11,7 @@
 ![image](screenshots/1_6.jpg)
 7.  Проверьте готовность Nexus через [бразуер](http://localhost:8081).
 8. Подключитесь под admin\admin123, поменяйте пароль, сохраните анонимный доступ.
-![image](1_8.jpg)
+![image](screenshots/1_8.jpg)
 
 ## Знакомоство с SonarQube
 
@@ -22,16 +22,16 @@
 3. Сделайте так, чтобы binary был доступен через вызов в shell (или поменяйте переменную PATH, или любой другой, удобный вам способ).
 ```export PATH=$(pwd):$PATH```
 4. Проверьте `sonar-scanner --version`.
-![image](2_4.jpg)
+![image](screenshots/2_4.jpg)
 5. Запустите анализатор против кода из директории [example](./example) с дополнительным ключом `-Dsonar.coverage.exclusions=fail.py`.
-![image](2_5.jpg)
-![image](2_5_1.jpg)
+![image](screenshots/2_5.jpg)
+![image](screenshots/2_5_1.jpg)
 6. Посмотрите результат в интерфейсе.
-![image](2_6.jpg)
+![image](screenshots/2_6.jpg)
 7. Исправьте ошибки, которые он выявил, включая warnings.
 8. Запустите анализатор повторно — проверьте, что QG пройдены успешно.
 9. Сделайте скриншот успешного прохождения анализа, приложите к решению ДЗ.
-![image](2_9.jpg)
+![image](screenshots/2_9.jpg)
 
 ## Знакомство с Nexus
 
@@ -44,10 +44,10 @@
  *    version: 8_282;
  *    classifier: distrib;
  *    type: tar.gz.
-![image](3_1.jpg)   
+![image](screenshots/3_1.jpg)   
 
 2. В него же загрузите такой же артефакт, но с version: 8_102.
-![image](3_2.jpg)   
+![image](screenshots/3_2.jpg)   
 
 3. Проверьте, что все файлы загрузились успешно.
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
@@ -74,7 +74,7 @@
 
 1. Скачайте дистрибутив с [maven](https://maven.apache.org/download.cgi).
 2. Разархивируйте, сделайте так, чтобы binary был доступен через вызов в shell (или поменяйте переменную PATH, или любой другой, удобный вам способ).
-![image](4_2.jpg) 
+![image](screenshots/4_2.jpg) 
 3. Удалите из `apache-maven-<version>/conf/settings.xml` упоминание о правиле, отвергающем HTTP- соединение — раздел mirrors —> id: my-repository-http-unblocker.
 4. Проверьте `mvn --version`.
 5. Заберите директорию [mvn](./mvn) с pom.
@@ -83,10 +83,10 @@
 
 1. Поменяйте в `pom.xml` блок с зависимостями под ваш артефакт из первого пункта задания для Nexus (java с версией 8_282).
 2. Запустите команду `mvn package` в директории с `pom.xml`, ожидайте успешного окончания.
-![image](5_2.jpg) 
-![image](5_2_1.jpg)
+![image](screenshots/5_2.jpg) 
+![image](screenshots/5_2_1.jpg)
 3. Проверьте директорию `~/.m2/repository/`, найдите ваш артефакт.
-![image](5_3.jpg)
+![image](screenshots/5_3.jpg)
 4. В ответе пришлите исправленный файл `pom.xml`.
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
