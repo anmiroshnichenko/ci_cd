@@ -1,18 +1,23 @@
 pipeline {
     agent {
-  label 'ansible'
+        label 'linux'
     }
+
     stages {
         stage('First') {
             steps {
-                sh 'ansible-playbook --version'
+                git branch: 'main', credentialsId: '6143ebb8-1ea9-41c4-ae84-6fbcefbb1fef', url: 'git@github.com:anmiroshnichenko/vector_role.git'
             }
         }
         stage('Second') {
             steps {
-                sh 'echo "Hello"'
-                sh 'echo "second step"'
-            }
+                sh 'pip3 install --force "molecule==3.3.4" "molecule_docker==0.3.3" yamllint ansible-lint'
+            }    
+        }
+        stage('Third') {
+            steps {
+                sh 'molecule test'
+            }    
         }
     }
 }

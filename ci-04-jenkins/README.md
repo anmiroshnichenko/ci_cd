@@ -2,16 +2,24 @@
 
 ## Подготовка к выполнению
 
-1. Создать два VM: для jenkins-master и jenkins-agent.
+1. Создать двe VM: для jenkins-master и jenkins-agent.
+![image](screenshots/1_1.jpg)
 2. Установить Jenkins при помощи playbook.
 3. Запустить и проверить работоспособность.
 4. Сделать первоначальную настройку.
+![image](screenshots/1_4.jpg)
 
 ## Основная часть
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+![image](screenshots/2_1.jpg)
+![image](screenshots/2_1_1.jpg)
+![image](screenshots/2_1_2.jpg)
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+![image](screenshots/2_2.jpg)
+![image](screenshots/2_2_1.jpg)
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
+
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
