@@ -19,12 +19,18 @@
 ![image](screenshots/2_2.jpg)
 ![image](screenshots/2_2_1.jpg)
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
-
+![image](screenshots/2_3.jpg)
+![image](screenshots/2_3_1.jpg)
+![image](screenshots/2_3_2.jpg)
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
+![image](screenshots/2_4.jpg)
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
+![image](screenshots/2_6.jpg)
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
+![image](screenshots/2_7.jpg)
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
+https://github.com/anmiroshnichenko/vector_role
 9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
 
 ## Необязательная часть
